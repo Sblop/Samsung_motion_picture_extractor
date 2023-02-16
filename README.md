@@ -13,6 +13,13 @@ The script uses the argparse module to parse command line arguments. The split f
 
 Run by:
 
- python split_motion_photo.py /path/example.jpg
- python split_motion_photo.py /path/example.jpg --force 
+ python split_motion_photo.py -h   For help
+
+ python split_motion_photo.py example.jpg   To seperate the Mp4 file from the jpg
+
+ python split_motion_photo.py /path/example.jpg To seperate the Mp4 file from the jpg, but in a subfolder
+ 
+ python split_motion_photo.py /path/example.jpg --force Force creation of mp4 and overwrite, if exists
+ 
+ Example of a find command, that searches for all jpg files and convert these.
  find "/share/path/upload" -type f -name "*.jpg" -exec python split_motion_photo.py {} --force \;
